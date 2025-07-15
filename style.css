@@ -1,69 +1,458 @@
-/* Reset de base */
-body, h1, a {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  text-decoration: none;
-  color: inherit;
-}
+
+/* Style sombre et pro pour Fantasia */
+
 
 body {
-  background-color: #f6f6f0;
-  color: #333;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Header */
 header {
+  background-color: #111;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2e5d34;
-  padding: 10px 20px;
-  color: white;
 }
 
-.header-left .logo {
-  width: 50px;
-  height: 50px;
-  animation: rotation 5s infinite linear;
-}
-
-@keyframes rotation {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.header-right h1 {
-  font-size: 24px;
-}
-
-/* Navigation */
-nav {
-  background-color: #244b2a;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px;
-}
-
-nav a {
-  color: white;
-  padding: 8px 16px;
-  border-radius: 4px;
-  transition: background-color 0.3s, transform 0.2s;
+header .logo {
+  font-size: 1.5rem;
   font-weight: bold;
+  color: #0af;
 }
 
-nav a:hover {
-  background-color: #3b703e;
+header nav a {
+  color: #0af;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #08f;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.sous-titre {
+  text-align: center;
+  color: #888;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.catalogue {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.produit {
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s;
+  box-shadow: 0 0 10px #000;
+}
+
+.produit:hover {
+  transform: scale(1.05);
+  border-color: #0af;
+}
+
+.produit img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.produit h2 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0.3rem;
+}
+
+.prix {
+  color: #0af;
+  font-weight: bold;
+  margin-top: 0.3rem;
+}
+
+/* -------------------- AJOUT STYLE BOUTONS AMÉLIORÉ -------------------- */
+
+header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+header nav a {
+  color: #fff;
+  background-color: #0af;
+  padding: 0.5rem 1.2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 5px #0af;
+  transition: all 0.3s ease;
+}
+
+header nav a:hover {
+  background-color: #08f;
+  box-shadow: 0 0 10px #08f, 0 0 20px #08f;
   transform: scale(1.05);
 }
 
-/* Panier spécifique */
-.cart-button {
-  background-color: #5a4634;
+header .logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0af;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #0af;
+  transition: text-shadow 0.3s ease;
 }
 
-.cart-button:hover {
-  background-color: #7a5a44;
+header .logo:hover {
+  text-shadow: 0 0 10px #08f, 0 0 20px #08f;
+}
+
+header .logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0af;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-shadow: 0 0 5px #0af;
+  transition: text-shadow 0.3s ease;
+}
+
+header .logo:hover {
+  text-shadow: 0 0 10px #08f, 0 0 20px #08f;
+}
+
+header .logo .icon {
+  display: inline-block;
+  animation: rotate360 3s linear infinite;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* -------------------- AJOUT POUR ICONES RECHERCHE + PANIER + COMPTEUR -------------------- */
+
+header nav a i {
+  font-size: 1.2rem;
+}
+
+header nav a.cart-link {
+  position: relative;
+}
+
+header nav a.cart-link .cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #08f;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+  box-shadow: 0 0 5px #08f;
+  transition: background-color 0.3s;
+}
+
+header nav a.cart-link:hover .cart-count {
+  background-color: #0af;
+}
+
+/* -------------------- AJOUT ANIMATION SUBTILE CARTES PRODUIT -------------------- */
+
+.produit {
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.produit:hover {
+  transform: scale(1.05);
+  border-color: #0af;
+  box-shadow: 0 0 20px #0af;
+}
+
+/* -------------------- AJOUT STYLE BOUTONS AJOUTER AU PANIER -------------------- */
+
+.ajouter-panier {
+  background-color: #0af;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.ajouter-panier:hover {
+  background-color: #08f;
+  transform: scale(1.05);
+}
+
+/* -------------------- AJOUT STYLE FOOTER ÉLÉGANT -------------------- */
+
+footer {
+  background-color: #111;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-top: 2px solid #0af;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  color: #888;
+}
+
+footer a {
+  color: #0af;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #08f;
+}
+
+/* -------------------- BANNIÈRE PROMO -------------------- */
+.banniere-promo {
+  background-color: #08f;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px #08f;
+}
+
+
+/* -------------------- PAGE PANIER -------------------- */
+.panier-liste {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.retirer-panier {
+  background-color: #f33;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.retirer-panier:hover {
+  background-color: #c00;
+  transform: scale(1.05);
+}
+
+.total-panier {
+  text-align: center;
+  color: #0af;
+  font-weight: bold;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.valider-commande {
+  display: block;
+  margin: 2rem auto;
+  background-color: #0af;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 5px #0af;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.valider-commande:hover {
+  background-color: #08f;
+  transform: scale(1.05);
+}
+
+.categorie-titre {
+  text-align: center;
+  color: #0af;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #0af;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.bouton-catalogue {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.bouton-catalogue a {
+  background-color: #0af;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 5px #0af;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.bouton-catalogue a:hover {
+  background-color: #08f;
+  box-shadow: 0 0 10px #08f, 0 0 20px #08f;
+  transform: scale(1.05);
+}
+
+.boutons-categories {
+  text-align: center;
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.boutons-categories a {
+  background-color: #0af;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 5px #0af;
+  transition: all 0.3s ease;
+}
+
+.boutons-categories a:hover {
+  background-color: #08f;
+  box-shadow: 0 0 10px #08f, 0 0 20px #08f;
+  transform: scale(1.05);
+}
+
+
+.page-produit {
+  max-width: 900px;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #000;
+}
+
+.page-produit img {
+  flex: 1 1 300px;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.details-produit {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.details-produit h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0af;
+  text-shadow: 0 0 5px #0af;
+}
+
+.details-produit .prix {
+  color: #0af;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.details-produit .description {
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.faq {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #111;
+  border-radius: 8px;
+}
+
+.faq .question {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1rem;
+}
+
+.faq .question h2 {
+  color: #0af;
+  margin-bottom: 0.5rem;
+}
+
+.faq .question p {
+  color: #ccc;
+  margin: 0;
+}
+
+footer {
+  background-color: #111;
+  padding: 1rem;
+  text-align: center;
+}
+
+.rotating-info {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #000;
+  border: 1px solid #0af;
+  border-radius: 8px;
+  color: #0af;
+  font-size: 0.95rem;
+  transition: opacity 0.5s ease;
 }
