@@ -88,7 +88,8 @@ header nav a:hover {
 
 .category-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 0 0 4px #2e5d34, 0 8px 16px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .category-card img {
