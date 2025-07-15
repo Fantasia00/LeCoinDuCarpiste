@@ -3,98 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Le Coin Du Carpiste</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Le Coin du Pecheur</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-  <body>
+
+  <!-- Bandeau promo -->
   <div class="banniere-promo">
     📣 Livraison gratuite dès 80 € d'achat !
   </div>
 
+  <!-- En-tête -->
   <header>
-<div class="logo">
-  <i class="fas fa-store icon"></i>
-  Le Coin Du Pecheur
-</div>
-
-    <nav>
+    <div class="header-left">
+      <i class="fas fa-store logo-icon"></i>
+      <span class="site-name">Le Coin du Pecheur</span>
+    </div>
+    <nav class="header-nav">
       <a href="#">Accueil</a>
       <a href="#">Contact</a>
-  <a href="faq.html">A Savoir</a>
-      <a href="#"><i class="fas fa-search"></i></a>
-      <a href="panier.html" class="cart-link">
-        <i class="fas fa-shopping-cart"></i>
-        <span class="cart-count">3</span>
+      <a href="#">À savoir</a>
+      <a href="#" class="cart-link">
+        <i class="fas fa-shopping-cart"></i> Panier
       </a>
     </nav>
   </header>
 
-<main>
-  <h1>Nos Nouveautés</h1>
-  <p class="sous-titre">Découvrez nos derniers arrivages sélectionnés pour vous.</p>
+  <!-- Contenu principal -->
+  <main>
+    <section class="hero">
+      <h1>Bienvenue sur Le Coin du Pecheur</h1>
+      <p>Le meilleur matériel pour la pêche, livré chez vous.</p>
+      <a href="#" class="cta-button">Voir la boutique</a>
+    </section>
+  </main>
 
-  <section class="catalogue">
-    <div class="produit">
-      <img src="images/produit1.jpg" alt="Nouveauté 1">
-      <h2>Nouveauté 1</h2>
-      <p class="prix">€14,99 EUR</p>
-      <button class="ajouter-panier">Ajouter au panier</button>
-    </div>
-    <div class="produit">
-      <img src="images/produit2.jpg" alt="Nouveauté 2">
-      <h2>Nouveauté 2</h2>
-      <p class="prix">€19,99 EUR</p>
-      <button class="ajouter-panier">Ajouter au panier</button>
-    </div>
-    <div class="produit">
-      <img src="images/produit3.jpg" alt="Nouveauté 3">
-      <h2>Nouveauté 3</h2>
-      <p class="prix">€24,99 EUR</p>
-      <button class="ajouter-panier">Ajouter au panier</button>
-    </div>
-  </section>
-
-  <div class="bouton-catalogue">
-    <a href="catalogue.html">Voir tout le catalogue</a>
-  </div>
-</main>
-
+  <!-- Pied de page -->
   <footer>
-  <div class="rotating-info" id="rotator">
-    📧 brindeligne62@gmail.com
-  </div>
-</footer>
+    <p>&copy; 2025 Le Coin du Pecheur. Tous droits réservés.</p>
+    <p>Contact : <a href="mailto:contact@lecoindupecheur.com">contact@lecoindupecheur.com</a></p>
+  </footer>
 
-</main>
-
-
-</footer>
-
-<script>
-  const rotator = document.getElementById('rotator');
-  const items = [
-    '📧 brindeligne62@gmail.com',
-    '📞 +33 7 45 09 05 36',
-    '<a href="contact.html" style="color:#0af;text-decoration:underline;">📬 Remplir le formulaire</a>'
-  ];
-
-  let index = 0;
-
-  setInterval(() => {
-    index = (index + 1) % items.length;
-    rotator.innerHTML = items[index];
-  }, 10000);
-</script>
 </body>
 </html>
-
-
-  <footer>
-    <p>&copy; 2025 LeCoinDuCarpiste. Tous droits réservés.</p>
-    <p>Contact : <a href="mailto:contact@fantasia.com">contact@fantasia.com</a></p>
-  </footer>
-</body>
-
- 
