@@ -100,5 +100,22 @@
     <p>&copy; 2025 Le Coin du Pecheur. Tous droits réservés.</p>
     <p>Contact : <a href="mailto:contact@lecoindupecheur.com">contact@lecoindupecheur.com</a></p>
   </footer>
+<script>
+  let itemCount = 0;
+  let totalAmount = 0;
+
+  const cartCount = document.getElementById('cart-count');
+  const buttons = document.querySelectorAll('.add-to-cart');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const price = parseFloat(button.getAttribute('data-price'));
+      itemCount += 1;
+      totalAmount += price;
+      cartCount.textContent = `${itemCount} article${itemCount > 1 ? 's' : ''} - ${totalAmount.toFixed(2)} €`;
+    });
+  });
+</script>
+
 </body>
 </html>
