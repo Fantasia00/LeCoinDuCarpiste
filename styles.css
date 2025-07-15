@@ -7,11 +7,11 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f6f6f0; /* gris clair */
+  background-color: #f6f6f0; 
   color: #333;
 }
 
-/* BANDEAU PROMO */
+/* Bandeau promo */
 .banniere-promo {
   background-color: #2e5d34;
   color: white;
@@ -20,7 +20,7 @@ body {
   font-weight: bold;
 }
 
-/* HEADER */
+/* Header */
 header {
   background-color: #3b703e;
   display: flex;
@@ -52,7 +52,6 @@ header {
   white-space: nowrap;
 }
 
-/* NAVIGATION */
 .header-nav {
   display: flex;
   gap: 16px;
@@ -74,20 +73,20 @@ header {
   transform: scale(1.05);
 }
 
-/* HERO */
+/* Hero */
 .hero {
   background-color: #e0e0d0;
   text-align: center;
   padding: 60px 20px;
 }
 
-.hero h1 {
+.hero-content h1 {
   color: #2e5d34;
   font-size: 36px;
   margin-bottom: 16px;
 }
 
-.hero p {
+.hero-content p {
   font-size: 18px;
   margin-bottom: 30px;
   color: #555;
@@ -108,7 +107,128 @@ header {
   transform: scale(1.05);
 }
 
-/* FOOTER */
+/* Advantages */
+.advantages {
+  background-color: #f6f6f0;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.advantages h2 {
+  color: #2e5d34;
+  margin-bottom: 20px;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.advantage {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 250px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.advantage:hover {
+  transform: translateY(-5px);
+}
+
+.advantage i {
+  font-size: 32px;
+  color: #2e5d34;
+  margin-bottom: 10px;
+}
+
+/* Products */
+.products {
+  background-color: #e0e0d0;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.products h2 {
+  color: #2e5d34;
+  margin-bottom: 20px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 8px;
+  width: 250px;
+  text-align: center;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.product-card h3 {
+  margin: 12px 0;
+  color: #2e5d34;
+}
+
+.price {
+  font-size: 16px;
+  color: #5a4634;
+  margin-bottom: 12px;
+}
+
+.product-card button {
+  background-color: #2e5d34;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.product-card button:hover {
+  background-color: #3b703e;
+  transform: scale(1.05);
+}
+
+.catalogue-link {
+  margin-top: 30px;
+}
+
+.catalogue-link a {
+  background-color: #2e5d34;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.catalogue-link a:hover {
+  background-color: #3b703e;
+  transform: scale(1.05);
+}
+
+/* Footer */
 footer {
   background-color: #2e5d34;
   color: white;
@@ -125,7 +245,7 @@ footer a:hover {
   color: #fff;
 }
 
-/* RESPONSIVE */
+/* Responsive */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -138,11 +258,17 @@ footer a:hover {
     margin-top: 10px;
   }
 
-  .hero h1 {
+  .advantages-list,
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content h1 {
     font-size: 28px;
   }
 
-  .hero p {
+  .hero-content p {
     font-size: 16px;
   }
 }
