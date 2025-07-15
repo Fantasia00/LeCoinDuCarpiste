@@ -1,4 +1,4 @@
-/* Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +7,11 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f6f6f0;  /* gris clair naturel */
+  background-color: #f6f6f0; /* gris clair */
   color: #333;
 }
 
-/* Promo bandeau */
+/* BANDEAU PROMO */
 .banniere-promo {
   background-color: #2e5d34;
   color: white;
@@ -20,7 +20,7 @@ body {
   font-weight: bold;
 }
 
-/* Header */
+/* HEADER */
 header {
   background-color: #3b703e;
   display: flex;
@@ -30,33 +30,37 @@ header {
   flex-wrap: wrap;
 }
 
-header .logo {
+.header-left {
   display: flex;
   align-items: center;
-  font-size: 24px;
+  gap: 10px;
   color: white;
+  font-size: 24px;
   font-weight: bold;
+}
+
+.logo-icon {
   animation: spin 8s linear infinite;
 }
 
-header .logo .icon {
-  margin-right: 8px;
-}
-
-/* Animation du logo */
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-/* Navigation */
-header nav {
+.site-name {
+  white-space: nowrap;
+}
+
+/* NAVIGATION */
+.header-nav {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
   align-items: center;
 }
 
-header nav a {
+.header-nav a {
   color: white;
   padding: 8px 14px;
   border-radius: 4px;
@@ -65,105 +69,31 @@ header nav a {
   transition: background-color 0.3s, transform 0.2s;
 }
 
-header nav a:hover {
+.header-nav a:hover {
   background-color: #2e5d34;
   transform: scale(1.05);
 }
 
-.cart-link {
-  position: relative;
-}
-
-.cart-count {
+/* HERO */
+.hero {
   background-color: #e0e0d0;
-  color: #2e5d34;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 12px;
-  position: absolute;
-  top: -8px;
-  right: -10px;
-}
-
-/* Main */
-main {
-  padding: 20px;
-  background-color: #e0e0d0;  /* gris plus soutenu pour contraste */
-}
-
-main h1 {
   text-align: center;
-  color: #2e5d34;
-  margin-bottom: 10px;
+  padding: 60px 20px;
 }
 
-.sous-titre {
-  text-align: center;
-  color: #555;
+.hero h1 {
+  color: #2e5d34;
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 18px;
   margin-bottom: 30px;
+  color: #555;
 }
 
-/* Catalogue */
-.catalogue {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.produit {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: 250px;
-  text-align: center;
-  padding: 16px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.produit:hover {
-  transform: translateY(-5px);
-}
-
-.produit img {
-  max-width: 100%;
-  border-radius: 4px;
-}
-
-.produit h2 {
-  margin: 12px 0;
-  color: #2e5d34;
-}
-
-.prix {
-  font-size: 16px;
-  color: #5a4634;
-  margin-bottom: 12px;
-}
-
-.ajouter-panier {
-  background-color: #2e5d34;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.ajouter-panier:hover {
-  background-color: #3b703e;
-  transform: scale(1.05);
-}
-
-/* Bouton voir catalogue */
-.bouton-catalogue {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.bouton-catalogue a {
+.cta-button {
   background-color: #2e5d34;
   color: white;
   padding: 12px 24px;
@@ -173,18 +103,17 @@ main h1 {
   transition: background-color 0.3s, transform 0.2s;
 }
 
-.bouton-catalogue a:hover {
+.cta-button:hover {
   background-color: #3b703e;
   transform: scale(1.05);
 }
 
-/* Footer */
+/* FOOTER */
 footer {
   background-color: #2e5d34;
   color: white;
   text-align: center;
   padding: 20px;
-  position: relative;
 }
 
 footer a {
@@ -196,33 +125,24 @@ footer a:hover {
   color: #fff;
 }
 
-/* Rotating info in footer */
-.rotating-info {
-  margin-bottom: 10px;
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  header nav {
-    flex-wrap: wrap;
+  .header-nav {
     justify-content: flex-start;
     gap: 10px;
     margin-top: 10px;
   }
 
-  .catalogue {
-    flex-direction: column;
-    align-items: center;
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
   }
 }
