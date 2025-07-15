@@ -112,20 +112,25 @@ header {
 }
 
 .cta-button {
+  display: inline-block;
   background-color: #2e5d34;
-  color: #fff;
-  padding: 12px 28px;
-  border-radius: 4px;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 6px;
   text-decoration: none;
+  font-size: 18px;
   font-weight: bold;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .cta-button:hover {
   background-color: #3b703e;
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
 }
+
 
 /* ADVANTAGES SECTION */
 .advantages {
@@ -199,20 +204,26 @@ header {
   gap: 24px;
 }
 
-.product-card {
-  background-color: #fff;
-  border-radius: 8px;
-  width: 260px;
-  text-align: center;
-  padding: 20px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+.product-card button {
+  background-color: #2e5d34;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+.product-card button:hover {
+  background-color: #3b703e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25);
 }
+
 
 .product-card img {
   max-width: 100%;
@@ -312,4 +323,23 @@ footer a:hover {
   .hero-content p {
     font-size: 16px;
   }
+}
+.discover-button {
+  background-color: #2e5d34;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.discover-button:hover {
+  background-color: #3b703e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25);
 }
