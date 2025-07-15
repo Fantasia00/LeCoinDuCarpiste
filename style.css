@@ -30,21 +30,26 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.hero {
-  background: url('https://example.com/ton-image-banniere.jpg') center/cover no-repeat;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
   text-align: center;
-  background-color: #3b703e;
 }
 
-.hero h1 {
-  background-color: rgba(0,0,0,0.5);
-  padding: 20px;
-  border-radius: 10px;
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2e5d34;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.hero .btn:hover {
+  background-color: #3b703e;
 }
 
 .section {
