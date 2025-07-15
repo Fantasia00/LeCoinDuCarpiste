@@ -1,458 +1,228 @@
-
-/* Style sombre et pro pour Fantasia */
-
-
-body {
-  background-color: #000;
-  color: #fff;
-  font-family: Arial, sans-serif;
+/* Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f6f6f0;  /* gris clair naturel */
+  color: #333;
+}
+
+/* Promo bandeau */
+.banniere-promo {
+  background-color: #2e5d34;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+}
+
+/* Header */
 header {
-  background-color: #111;
-  padding: 1rem 2rem;
+  background-color: #3b703e;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 12px 20px;
+  flex-wrap: wrap;
 }
 
 header .logo {
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: white;
   font-weight: bold;
-  color: #0af;
+  animation: spin 8s linear infinite;
+}
+
+header .logo .icon {
+  margin-right: 8px;
+}
+
+/* Animation du logo */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Navigation */
+header nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
 header nav a {
-  color: #0af;
-  margin-left: 1.5rem;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 4px;
   text-decoration: none;
-  transition: color 0.3s;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 header nav a:hover {
-  color: #08f;
+  background-color: #2e5d34;
+  transform: scale(1.05);
 }
 
+.cart-link {
+  position: relative;
+}
+
+.cart-count {
+  background-color: #e0e0d0;
+  color: #2e5d34;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
+
+/* Main */
 main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
+  background-color: #e0e0d0;  /* gris plus soutenu pour contraste */
 }
 
-h1 {
+main h1 {
   text-align: center;
-  margin-bottom: 0.5rem;
+  color: #2e5d34;
+  margin-bottom: 10px;
 }
 
 .sous-titre {
   text-align: center;
-  color: #888;
-  margin-bottom: 2rem;
-  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 30px;
 }
 
+/* Catalogue */
 .catalogue {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 20px;
 }
 
 .produit {
-  background-color: #111;
-  border: 1px solid #222;
+  background-color: white;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 1rem;
-  width: 220px;
+  width: 250px;
   text-align: center;
-  transition: transform 0.2s, border-color 0.2s;
-  box-shadow: 0 0 10px #000;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
 .produit:hover {
-  transform: scale(1.05);
-  border-color: #0af;
+  transform: translateY(-5px);
 }
 
 .produit img {
-  width: 100%;
+  max-width: 100%;
   border-radius: 4px;
-  margin-bottom: 0.5rem;
 }
 
 .produit h2 {
-  font-size: 1.1rem;
-  margin: 0.5rem 0 0.3rem;
+  margin: 12px 0;
+  color: #2e5d34;
 }
 
 .prix {
-  color: #0af;
-  font-weight: bold;
-  margin-top: 0.3rem;
+  font-size: 16px;
+  color: #5a4634;
+  margin-bottom: 12px;
 }
-
-/* -------------------- AJOUT STYLE BOUTONS AMÉLIORÉ -------------------- */
-
-header nav {
-  display: flex;
-  gap: 1rem;
-}
-
-header nav a {
-  color: #fff;
-  background-color: #0af;
-  padding: 0.5rem 1.2rem;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 5px #0af;
-  transition: all 0.3s ease;
-}
-
-header nav a:hover {
-  background-color: #08f;
-  box-shadow: 0 0 10px #08f, 0 0 20px #08f;
-  transform: scale(1.05);
-}
-
-header .logo {
-  font-size: 2rem;
-  font-weight: 900;
-  color: #0af;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-shadow: 0 0 5px #0af;
-  transition: text-shadow 0.3s ease;
-}
-
-header .logo:hover {
-  text-shadow: 0 0 10px #08f, 0 0 20px #08f;
-}
-
-header .logo {
-  font-size: 2rem;
-  font-weight: 900;
-  color: #0af;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-shadow: 0 0 5px #0af;
-  transition: text-shadow 0.3s ease;
-}
-
-header .logo:hover {
-  text-shadow: 0 0 10px #08f, 0 0 20px #08f;
-}
-
-header .logo .icon {
-  display: inline-block;
-  animation: rotate360 3s linear infinite;
-}
-
-@keyframes rotate360 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* -------------------- AJOUT POUR ICONES RECHERCHE + PANIER + COMPTEUR -------------------- */
-
-header nav a i {
-  font-size: 1.2rem;
-}
-
-header nav a.cart-link {
-  position: relative;
-}
-
-header nav a.cart-link .cart-count {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background-color: #08f;
-  color: #fff;
-  font-size: 0.7rem;
-  padding: 2px 6px;
-  border-radius: 50%;
-  font-weight: bold;
-  box-shadow: 0 0 5px #08f;
-  transition: background-color 0.3s;
-}
-
-header nav a.cart-link:hover .cart-count {
-  background-color: #0af;
-}
-
-/* -------------------- AJOUT ANIMATION SUBTILE CARTES PRODUIT -------------------- */
-
-.produit {
-  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-}
-
-.produit:hover {
-  transform: scale(1.05);
-  border-color: #0af;
-  box-shadow: 0 0 20px #0af;
-}
-
-/* -------------------- AJOUT STYLE BOUTONS AJOUTER AU PANIER -------------------- */
 
 .ajouter-panier {
-  background-color: #0af;
-  color: #fff;
+  background-color: #2e5d34;
+  color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  margin-top: 0.5rem;
-  border-radius: 8px;
+  padding: 10px 20px;
+  border-radius: 4px;
   cursor: pointer;
-  font-weight: bold;
   transition: background-color 0.3s, transform 0.2s;
 }
 
 .ajouter-panier:hover {
-  background-color: #08f;
+  background-color: #3b703e;
   transform: scale(1.05);
 }
 
-/* -------------------- AJOUT STYLE FOOTER ÉLÉGANT -------------------- */
-
-footer {
-  background-color: #111;
-  padding: 1rem 2rem;
-  text-align: center;
-  border-top: 2px solid #0af;
-}
-
-footer p {
-  margin: 0.5rem 0;
-  color: #888;
-}
-
-footer a {
-  color: #0af;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #08f;
-}
-
-/* -------------------- BANNIÈRE PROMO -------------------- */
-.banniere-promo {
-  background-color: #08f;
-  color: #fff;
-  text-align: center;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  box-shadow: 0 0 10px #08f;
-}
-
-
-/* -------------------- PAGE PANIER -------------------- */
-.panier-liste {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.retirer-panier {
-  background-color: #f33;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  margin-top: 0.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.retirer-panier:hover {
-  background-color: #c00;
-  transform: scale(1.05);
-}
-
-.total-panier {
-  text-align: center;
-  color: #0af;
-  font-weight: bold;
-  margin-top: 2rem;
-  font-size: 1.2rem;
-}
-
-.valider-commande {
-  display: block;
-  margin: 2rem auto;
-  background-color: #0af;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 12px;
-  cursor: pointer;
-  font-weight: bold;
-  box-shadow: 0 0 5px #0af;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.valider-commande:hover {
-  background-color: #08f;
-  transform: scale(1.05);
-}
-
-.categorie-titre {
-  text-align: center;
-  color: #0af;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-bottom: 2px solid #0af;
-  display: inline-block;
-  padding-bottom: 0.5rem;
-}
-
+/* Bouton voir catalogue */
 .bouton-catalogue {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 30px;
 }
 
 .bouton-catalogue a {
-  background-color: #0af;
-  color: #fff;
-  padding: 0.5rem 1.2rem;
-  border-radius: 12px;
+  background-color: #2e5d34;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 0 5px #0af;
-  transition: all 0.3s ease;
-  display: inline-block;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .bouton-catalogue a:hover {
-  background-color: #08f;
-  box-shadow: 0 0 10px #08f, 0 0 20px #08f;
+  background-color: #3b703e;
   transform: scale(1.05);
 }
 
-.boutons-categories {
-  text-align: center;
-  margin: 2rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.boutons-categories a {
-  background-color: #0af;
-  color: #fff;
-  padding: 0.5rem 1.2rem;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 5px #0af;
-  transition: all 0.3s ease;
-}
-
-.boutons-categories a:hover {
-  background-color: #08f;
-  box-shadow: 0 0 10px #08f, 0 0 20px #08f;
-  transform: scale(1.05);
-}
-
-
-.page-produit {
-  max-width: 900px;
-  margin: 2rem auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  background-color: #111;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #000;
-}
-
-.page-produit img {
-  flex: 1 1 300px;
-  max-width: 400px;
-  border-radius: 8px;
-}
-
-.details-produit {
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.details-produit h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #0af;
-  text-shadow: 0 0 5px #0af;
-}
-
-.details-produit .prix {
-  color: #0af;
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.details-produit .description {
-  color: #ccc;
-  margin-bottom: 2rem;
-  line-height: 1.5;
-}
-
-.faq {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background-color: #111;
-  border-radius: 8px;
-}
-
-.faq .question {
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid #333;
-  padding-bottom: 1rem;
-}
-
-.faq .question h2 {
-  color: #0af;
-  margin-bottom: 0.5rem;
-}
-
-.faq .question p {
-  color: #ccc;
-  margin: 0;
-}
-
+/* Footer */
 footer {
-  background-color: #111;
-  padding: 1rem;
+  background-color: #2e5d34;
+  color: white;
   text-align: center;
+  padding: 20px;
+  position: relative;
 }
 
+footer a {
+  color: #ddd;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Rotating info in footer */
 .rotating-info {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #000;
-  border: 1px solid #0af;
-  border-radius: 8px;
-  color: #0af;
-  font-size: 0.95rem;
-  transition: opacity 0.5s ease;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .catalogue {
+    flex-direction: column;
+    align-items: center;
+  }
 }
