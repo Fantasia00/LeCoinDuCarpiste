@@ -3,28 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Le Coin du Carpiste</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Fantasia</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
+  <body>
+  <div class="banniere-promo">
+    📣 Livraison gratuite dès 50 € d'achat !
+  </div>
 
   <header>
-    <div class="header-left">
-      <img src="https://via.placeholder.com/50x50?text=Logo" alt="Logo" class="logo" />
+    <div class="logo">
+      <i class="fas fa-store icon"></i>
+      Fantasia
     </div>
-    <div class="header-right">
-      <h1>Le Coin du Carpiste</h1>
-    </div>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Contact</a>
+  <a href="faq.html">FAQ</a>
+      <a href="#"><i class="fas fa-search"></i></a>
+      <a href="panier.html" class="cart-link">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">3</span>
+      </a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#">Accueil</a>
-    <a href="#">Contact</a>
-    <a href="#">À savoir</a>
-    <a href="#" class="cart-button">🛒 Panier</a>
-  </nav>
+<main>
+  <h1>Nos Nouveautés</h1>
+  <p class="sous-titre">Découvrez nos derniers arrivages sélectionnés pour vous.</p>
 
-  <!-- Le reste de ta page ici -->
+  <section class="catalogue">
+    <div class="produit">
+      <img src="images/produit1.jpg" alt="Nouveauté 1">
+      <h2>Nouveauté 1</h2>
+      <p class="prix">€14,99 EUR</p>
+      <button class="ajouter-panier">Ajouter au panier</button>
+    </div>
+    <div class="produit">
+      <img src="images/produit2.jpg" alt="Nouveauté 2">
+      <h2>Nouveauté 2</h2>
+      <p class="prix">€19,99 EUR</p>
+      <button class="ajouter-panier">Ajouter au panier</button>
+    </div>
+    <div class="produit">
+      <img src="images/produit3.jpg" alt="Nouveauté 3">
+      <h2>Nouveauté 3</h2>
+      <p class="prix">€24,99 EUR</p>
+      <button class="ajouter-panier">Ajouter au panier</button>
+    </div>
+  </section>
 
+  <div class="bouton-catalogue">
+    <a href="catalogue.html">Voir tout le catalogue</a>
+  </div>
+</main>
+
+  <footer>
+  <div class="rotating-info" id="rotator">
+    📧 contact@tonsite.com
+  </div>
+</footer>
+
+</main>
+
+
+</footer>
+
+<script>
+  const rotator = document.getElementById('rotator');
+  const items = [
+    '📧 contact@tonsite.com',
+    '📞 +33 6 12 34 56 78',
+    '<a href="contact.html" style="color:#0af;text-decoration:underline;">📬 Remplir le formulaire</a>'
+  ];
+
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % items.length;
+    rotator.innerHTML = items[index];
+  }, 10000);
+</script>
 </body>
 </html>
+
+
+  <footer>
+    <p>&copy; 2025 LeCoinDuCarpiste. Tous droits réservés.</p>
+    <p>Contact : <a href="mailto:contact@fantasia.com">contact@fantasia.com</a></p>
+  </footer>
+</body>
+
+ 
